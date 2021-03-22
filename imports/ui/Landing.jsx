@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 
 import Page from '/imports/components/Page';
+import Navigation from '/imports/components/Navigation';
 import Truits from '/imports/components/Truits';
 
 const Landing = () => {
@@ -32,10 +33,7 @@ const Landing = () => {
 
   return (
     <Page>
-      <nav>
-        <h1>Truiteur - le microbloging made in France</h1>
-        <button type="button" onClick={() => Meteor.logout()}>Déconexion</button>
-      </nav>
+      <Navigation />
       <form onSubmit={handleSubmit}>
         <textarea
           name="truit"
