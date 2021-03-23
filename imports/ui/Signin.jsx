@@ -1,8 +1,8 @@
 import { Meteor } from 'meteor/meteor';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
+import Button from '/imports/components/Button';
 import Page from '/imports/components/Page';
 
 const Signin = () => {
@@ -52,10 +52,8 @@ const Signin = () => {
           value={password}
           onChange={handleChange}
         />
-        <button type="submit">
-          Connexion
-        </button>
-        <Link to="/signup">Inscription</Link>
+        <Button type="submit">Connexion</Button>
+        <Button to="/signup" outlined>Inscription</Button>
       </form>
     </Page>
   );
